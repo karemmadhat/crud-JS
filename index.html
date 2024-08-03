@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>karem</title>
+    <script src="progict.js"></script>
+    <link rel="styelsheet"href="styel.css">
+<style>
+*{
+  margin: 0;
+  padding: 0;  
+}
+body{
+    background:#222;
+    color:#fff;
+    font-family:system-ui;
+}
+.crud{
+    width: 80%;
+    margin: outo;
+}
+.head{
+    text-align: center;
+    text-transform:uppercase;
+    margin: 10px;
+}
+input{
+    width: 100%;
+    height:30px ;
+    outline: none;
+    border:none;
+    background: #111;
+    margin: 4px 0;
+    border-radius: 4px;
+    padding:4px;
+    color: #fff;
+
+}
+input:focus{
+    background: #000;
+    transform:scale(1.1);
+}
+.price input{
+    width: 20%;
+}
+#total{
+    background: #e61608;
+    padding: 5px 4px;
+    border-radius: 4px;
+}
+#total::before{
+    content: "totel";
+}
+button{
+    width: 100%;
+    height: 30px;
+    border:none;
+     cursor: pointer;
+     background: #820332;
+     color:#fff;
+     border-radius: 20px;
+     transition: 0.5s;
+}
+button:hover{
+    background: #ec3175;
+    letter-spacing: 1px;
+}
+.betsearch{
+    display: flex;
+    justify-content: space-between;
+}
+.search button{
+    width: 45px;
+}
+table{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}.table th{
+    text-transform: uppercase;
+}td,th{
+    padding: 5px;
+} 
+
+  </style>
+</head>
+
+   
+ .<div class="crud">
+    <div class="head">
+<h2>crud</h2>
+<p>PORODUCT MANGMNT SYSTEM</p>
+    </div> 
+
+    
+    <div class="inputs">
+        <input placeholder="title" type="text" id="title">
+        <div class="price">
+            <input onkeyup="gettotal()" type="number"id="price" placeholder="price">
+            <input onkeyup="gettotal()" type="number" id="taxes" placeholder="taxes">
+            <input onkeyup="gettotal()" type="number" id="abs" placeholder="abs">
+            <input onkeyup="gettotal()" type="number" id="discunt" placeholder="discunt">
+            <small id="totel">totel</small>
+        </div>
+        <input placeholder="count" type="number" id="count">
+        <input placeholder="category" type="text" id="category">
+        <button id="submit">create</button>
+
+    </div>
+    <div class="outputs">
+    .<div class="srarchblock" >
+        <input type="text" id="search"placeholder="search">
+        <div class="btnsearch">
+            <button id="searchtitle">search By tittle</button>
+            <button id="searchtcategory">search By category</button>
+
+        </div>
+    </div>
+     <table>
+    <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>price</th>
+        <th>taxes</th>
+        <th>abs</th>
+        <th>discoumnt</th>
+        <th>total</th>
+        <th>category</th>
+        <th>update</th>
+        <th>delete</th>
+    
+           </tr>
+         <tbody>
+            <tr>
+                <td>1</td>
+                <td>opp</td>
+                <td>5000</td>
+                <td>200</td>
+                <td>200</td>
+                <td>200</td>
+                <td>5200</td>
+                <td>phone</td>
+                <td><button id="update">update</button></td>
+                <td><button id="delete">delete</button></td>
+
+
+
+            </tr>
+         </tbody>   
+     </table>
+    </div>
+ </div>
+</body>
+</html>
